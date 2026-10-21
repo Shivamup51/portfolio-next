@@ -22,7 +22,11 @@ export const viewport: Viewport = { themeColor: "#050505" };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <div className="glow" aria-hidden="true" />
+        <div className="grain" aria-hidden="true" />
+        {children}
+      </body>
     </html>
   );
 }
